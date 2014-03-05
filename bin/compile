@@ -41,7 +41,8 @@ compile_source() {
 }
 
 vendor_bin() {
-  cp $CACHE_DIR/$ARCHIVE_DIR/haproxy $BUILD_DIR/haproxy
+    echo "copying binary from $CACHE_DIR/$ARCHIVE_DIR/haproxy to $BUILD_DIR/haproxy"
+    cp $CACHE_DIR/$ARCHIVE_DIR/haproxy $BUILD_DIR/haproxy
 }
 
 get_source
