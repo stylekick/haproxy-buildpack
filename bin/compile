@@ -3,6 +3,7 @@
 
 BUILD_DIR=$1
 CACHE_DIR=$2
+
 VERSION_DIR=`cd $(dirname $0); cd ..; pwd`
 VERSION=`cat $VERSION_DIR/VERSION | sed 's/[\r\n]*$//'`
 ARCHIVE=`basename $VERSION`
