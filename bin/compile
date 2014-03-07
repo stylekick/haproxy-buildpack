@@ -8,6 +8,7 @@ VERSION_DIR=`cd $(dirname $0); cd ..; pwd`
 VERSION=`cat $VERSION_DIR/VERSION | sed 's/[\r\n]*$//'`
 ARCHIVE=`basename $VERSION`
 ARCHIVE_DIR=`echo $ARCHIVE | sed 's/\.tar\.gz$//'`
+STARTSCRIPT_DIR=`cd $(dirname $0); pwd`
 
 get_source() {
   if [ ! -d $CACHE_DIR ]; then
@@ -43,7 +44,7 @@ compile_source() {
 vendor_bin() {
     echo "copying binary from $CACHE_DIR/$ARCHIVE_DIR/haproxy to $BUILD_DIR/haproxy"
     cp $CACHE_DIR/$ARCHIVE_DIR/haproxy $BUILD_DIR/haproxy
-    cp startup.sh $BUILD_DIR/startup.sh
+    cp $STARTSCRIPT_DIR/startup.sh $BUILD_DIR/startup.sh
 }
 
 get_source
