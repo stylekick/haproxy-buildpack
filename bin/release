@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 # echo "--- {}"
-echo -e "---\ndefault_process_types:\n  web: ./build/haproxy"
+# echo -e "---\ndefault_process_types:\n  web: ./build/haproxy"
+echo -e "---\ndefault_process_types:\n  web: sh startup.sh"
